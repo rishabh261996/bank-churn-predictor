@@ -2,7 +2,7 @@
 
 # Bank Churn Prediction Website
 
-![Bank Churn Prediction](https://your-link-to-image.com/banner.png)
+![image](https://github.com/user-attachments/assets/770bad8c-7c2d-49b7-a943-6f9461ae8236)
 
 ## Overview
 
