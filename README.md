@@ -1,7 +1,5 @@
 ![image](https://github.com/user-attachments/assets/a4960206-4250-43cb-a1cf-1a3ca3dda8d9)
-### README.md
 
-```markdown
 # Bank Churn Prediction Website
 
 ![Bank Churn Prediction](https://your-link-to-image.com/banner.png)
