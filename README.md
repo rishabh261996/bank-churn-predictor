@@ -82,7 +82,11 @@ python app.py
 
 ## Demo
 
-You can access the live demo of the project [https://bank-churn-predictor-3o97.onrender.com/predict](https://your-deployed-app-link.com).  
+You can access the live demo of the project:
+
+https://bank-churn-predictor-3o97.onrender.com/
+
+
 
 
 ## Machine Learning Model
