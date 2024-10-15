@@ -4,45 +4,126 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Churn Prediction App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .result {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            color: #28a745;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 10px;
+            margin-top: 40px;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
 </head>
 <body>
-    <h2>Enter Customer Data for Churn Prediction</h2>
-    <form action="/predict" method="post">
-        <label>Credit Score:</label><br>
-        <input type="text" name="credit_score" required><br><br>
 
-        <label>Country (0, 1, 2):</label><br>
-        <input type="text" name="country" required><br><br>
+    <div class="container">
+        <h2>Enter Customer Data for Churn Prediction</h2>
+        <form action="/predict" method="post">
+            <label>Credit Score:</label>
+            <input type="text" name="credit_score" required>
 
-        <label>Gender (0 = Male, 1 = Female):</label><br>
-        <input type="text" name="gender" required><br><br>
+            <label>Country (0, 1, 2):</label>
+            <input type="text" name="country" required>
 
-        <label>Age:</label><br>
-        <input type="text" name="age" required><br><br>
+            <label>Gender (0 = Male, 1 = Female):</label>
+            <input type="text" name="gender" required>
 
-        <label>Tenure:</label><br>
-        <input type="text" name="tenure" required><br><br>
+            <label>Age:</label>
+            <input type="text" name="age" required>
 
-        <label>Balance:</label><br>
-        <input type="text" name="balance" required><br><br>
+            <label>Tenure:</label>
+            <input type="text" name="tenure" required>
 
-        <label>Number of Products:</label><br>
-        <input type="text" name="products_number" required><br><br>
+            <label>Balance:</label>
+            <input type="text" name="balance" required>
 
-        <label>Has Credit Card (0 or 1):</label><br>
-        <input type="text" name="credit_card" required><br><br>
+            <label>Number of Products:</label>
+            <input type="text" name="products_number" required>
 
-        <label>Is Active Member (0 or 1):</label><br>
-        <input type="text" name="active_member" required><br><br>
+            <label>Has Credit Card (0 or 1):</label>
+            <input type="text" name="credit_card" required>
 
-        <label>Estimated Salary:</label><br>
-        <input type="text" name="estimated_salary" required><br><br>
+            <label>Is Active Member (0 or 1):</label>
+            <input type="text" name="active_member" required>
 
-        <input type="submit" value="Predict">
-    </form>
+            <label>Estimated Salary:</label>
+            <input type="text" name="estimated_salary" required>
 
-    {% if prediction_text %}
-        <h3>{{ prediction_text }}</h3>
-    {% endif %}
+            <input type="submit" value="Predict">
+        </form>
+
+        {% if prediction_text %}
+            <div class="result">
+                <h3>{{ prediction_text }}</h3>
+            </div>
+        {% endif %}
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Bank Churn Prediction | Powered by Flask and Machine Learning</p>
+    </div>
+
 </body>
 </html>
